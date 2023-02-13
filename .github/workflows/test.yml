@@ -1,0 +1,26 @@
+name: use pnpm
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: test m2en preset
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.27.0
+
+      - name: install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: test preset
+        run: pnpm test
