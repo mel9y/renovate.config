@@ -5,6 +5,7 @@
     "automerge": true,
     "platformAutomerge": true,
     "fetchReleaseNotes": true,
+    "dependencyDashboard": true,
     "prConcurrentLimit": 5,
     "stabilityDays": 3,
     "semanticCommits": "enabled",
